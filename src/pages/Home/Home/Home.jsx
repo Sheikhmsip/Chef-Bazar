@@ -4,8 +4,11 @@ import slider1 from '../../../assets/slide01.jpg'
 import slider2 from '../../../assets/slide02.jpg'
 import slider3 from '../../../assets/slide03.jpg'
 import slider4 from '../../../assets/slide04.jpg'
+import Chef from '../Chef/Chef';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const chefs = useLoaderData();
     return (
         <div className='container mx-auto'>
             
@@ -23,7 +26,12 @@ const Home = () => {
                     <img src={slider4} className="w-full h-[70vh]" />
                 </div>
             </Marquee>
-            
+            <div className='grid grid-cols-3 gap-4 justify-between mt-5'>
+            {
+                chefs.map(chef => <Chef key={chef.id}
+                chef={chef}></Chef>)
+            }
+            </div>
            
         </div>
     );
