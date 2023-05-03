@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Chef = ({chef}) => {
-    const {name, id} = chef;
+    const {name, id, recipes_numbers, experience_years} = chef;
     return (
         
                 <div className="col glass rounded-md">
@@ -13,8 +13,8 @@ const Chef = ({chef}) => {
 
                         <div className='flex justify-between mt-3'>
                             <p><span className='text-sky-800'>1200</span> Likes</p>
-                            <p>items of chef</p>
-                            <p><span className='text-red-800'>Experience: </span></p>
+                            <p>Recipes: {recipes_numbers}</p>
+                            <p className='text-red-800'>Experience:<span>{experience_years} Years </span></p>
                         </div>
 
                         <div className="flex justify-between mt-3 ">

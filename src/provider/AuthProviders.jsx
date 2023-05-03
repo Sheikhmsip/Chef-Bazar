@@ -21,6 +21,9 @@ const [user, setUser] = useState(null);
         return signInWithEmailAndPassword(auth, email, password);
     } 
 
+    const logOut = (email, password) => {
+        return signOut(auth);
+    }
     const googleProvider = new GoogleAuthProvider();
 
     const googleLogin = () =>{
@@ -62,6 +65,7 @@ const [user, setUser] = useState(null);
         user,
         createUser,
         signIn,
+        logOut,
         googleLogin,
         githubLogin
     }

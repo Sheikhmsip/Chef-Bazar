@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
     
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log('login page location', location)
+    const from = location.state?.from?.pathname || '/'
+
 
     const handleLogin = event => {
         event.preventDefault();
