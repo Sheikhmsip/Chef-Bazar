@@ -26,7 +26,7 @@ const Home = () => {
                     <img src={slider4} className="w-full h-[70vh]" />
                 </div>
             </Marquee>
-            <div className='grid grid-cols-3 gap-4 justify-between mt-5'>
+            <div className='grid md:grid-cols-3 gap-4 grid-cols-1 justify-between mt-5'>
             {
                 chefs.map(chef => <Chef key={chef.id}
                 chef={chef}></Chef>)
