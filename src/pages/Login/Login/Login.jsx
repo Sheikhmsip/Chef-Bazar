@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
     
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +21,13 @@ const Login = () => {
             console.log(loggedUser);
         })
         .catch(error => console.log(error))
+    }
+    const handleGoogleSignIn = () => {
+        googleLogin()
+        
+    }
+    const handleGithubSignIn = () => {
+        githubLogin()
     }
 
     return (
@@ -44,10 +52,10 @@ const Login = () => {
 
                 <p>Don't have an account <span> <Link className='link link-primary' to="/register">Registration</Link></span></p>
                 <p className='btn btn-error w-80 py-2 mt-2 mx-auto text-center'>
-                  <FaGoogle className=' w-10 h-7'></FaGoogle>  Login With Google
+                  <FaGoogle onClick={handleGoogleSignIn} className=' w-10 h-7'></FaGoogle>  Login With Google
                 </p>
                 <p className='btn bg-black w-80 py-2 mt-2 mx-auto text-center'>
-                    <FaGithub className=' w-10 h-7'></FaGithub>
+                    <FaGithub onClick={handleGithubSignIn} className=' w-10 h-7'></FaGithub>
                 Login With GitHub 
             </p>
             </form>
