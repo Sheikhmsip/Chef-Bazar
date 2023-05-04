@@ -11,7 +11,7 @@ const ErrorPage = () => {
         </div>
         <div className='max-w-md text-center'>
           <h2 className='mb-8 font-extrabold text-9xl text-purple-600'>
-            <span className='sr-only'>Error</span> 
+            <span className='sr-only'>Error </span> 
           </h2>
           <p className='text-2xl font-semibold md:text-3xl mb-8'>
             you are at wrong place!!!

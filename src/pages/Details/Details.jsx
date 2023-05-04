@@ -1,12 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const Details = () => {
     const details = useLoaderData();
+    const {id} = useParams()
+
+    const detail = details.find(d => d.id === id)
+    const {name,} = detail;
     console.log(details)
     return (
         <div>
-            <p>this is details page</p>
+           <h2>name:{name}</h2>
         </div>
     );
 };

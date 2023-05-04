@@ -7,6 +7,8 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Register from '../pages/Login/Register/Register';
 import Blogs from '../pages/Blogs/Blogs';
 import Details from '../pages/Details/Details';
+import DetailsLayout from '../Layout/DetailsLayout';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter ([
     {
@@ -17,7 +19,7 @@ const router = createBrowserRouter ([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ({params}) => fetch('http://localhost:5000/chefs/')
+                loader: ({params}) => fetch('https://chef-hunter-server-sheikhmsip.vercel.app/chefs')
             },
             {
                 path: '/login',
@@ -31,13 +33,23 @@ const router = createBrowserRouter ([
                 path: '/blogs',
                 element: <Blogs></Blogs>
             },
+           
+        ]
+    },
+    {
+        path:'/',
+        element: <DetailsLayout></DetailsLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
                 path: '/:id',
-                element: <Details></Details>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
             }
         ]
     }
+    
+   
 ]) 
 
 export default router;
