@@ -9,7 +9,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('login page location', location)
+    // console.log('login page location', location)
     const from = location.state?.from?.pathname || '/'
 
 
@@ -19,7 +19,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password)
+        // console.log(email, password)
 
 
     
