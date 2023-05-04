@@ -13,7 +13,7 @@ const Header = () => {
     }
     return (
         <div className=' bg-purple-400  py-3 px-2'>
-           
+
             <div className="navbar bg-purple-600 rounded-2xl ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -28,7 +28,7 @@ const Header = () => {
                                 </ActiveLink>
                                
                             </li>
-                            <li><ActiveLink>About</ActiveLink></li>
+                            <li><ActiveLink to='/about'>About</ActiveLink></li>
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl">Chef Bazar</Link>
@@ -42,7 +42,7 @@ const Header = () => {
                             </ActiveLink>
                             
                         </li>
-                        <li><ActiveLink to='/about'>About</ActiveLink></li>
+                        <li><ActiveLink to='about' >About</ActiveLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

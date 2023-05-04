@@ -4,7 +4,7 @@ import img from '../../../assets/footer-img.png'
 const Footer = () => {
     return (
         <> 
-        <footer className=" container mx-auto rounded-lg mt-5 footer p-10 bg-black text-white">
+        <footer className="mt-5 footer p-10 bg-black text-white">
   <div>
     <img className='w-[250px] h-[200px]' src={img} alt="" />
     

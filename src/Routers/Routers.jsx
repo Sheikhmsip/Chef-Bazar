@@ -9,6 +9,7 @@ import Blogs from '../pages/Blogs/Blogs';
 import Details from '../pages/Details/Details';
 import DetailsLayout from '../Layout/DetailsLayout';
 import PrivateRoute from './PrivateRoute';
+import About from '../pages/About/About';
 
 const router = createBrowserRouter ([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter ([
                 path: '/blogs',
                 element: <Blogs></Blogs>
             },
+            {
+                path: '/about',
+                element: <About></About>
+            }
            
         ]
     },

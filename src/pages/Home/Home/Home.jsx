@@ -6,12 +6,13 @@ import slider3 from '../../../assets/slide03.jpg'
 import slider4 from '../../../assets/slide04.jpg'
 import Chef from '../Chef/Chef';
 import { useLoaderData } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     const chefs = useLoaderData();
     return (
         <div className=''>
-             <div className='text-center'>
+            <div className='text-center'>
                 <h1 className='text-white font-extrabold text-3xl'>Chef Hunter </h1>
             </div>
             <Marquee speed={200} className="carousel w-full rounded-lg">
@@ -29,12 +30,16 @@ const Home = () => {
                 </div>
             </Marquee>
             <div className='container mx-auto grid md:grid-cols-3 gap-4 grid-cols-1 justify-between mt-5'>
-            {
-                chefs.map(chef => <Chef key={chef.id}
-                chef={chef}></Chef>)
-            }
+                {
+                    chefs.map(chef => <Chef key={chef.id}
+                        chef={chef}></Chef>)
+                }
             </div>
-           
+            <div>
+                <Banner></Banner>
+            </div>
+
+
         </div>
     );
 };

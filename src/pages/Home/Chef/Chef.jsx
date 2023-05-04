@@ -9,7 +9,7 @@ const Chef = ({chef}) => {
                 <div className="col glass rounded-md">
                     <img className='rounded-md w-full h-72' src={photo_url} />
                     <div className="p-3">
-                        <h2 className="card-title">Name: {name}</h2>
+                        <h2 className="card-title text-yellow-300"><span className='text-purple-200'>Chef Name:</span>  {name}</h2>
                         
 
                         <div className='flex justify-between mt-3 font-bold gap-2'>
@@ -19,7 +19,7 @@ const Chef = ({chef}) => {
                         </div>
 
                         <div className="flex justify-between mt-3 ">
-                            <Link to={`${id}`} className="text-sm bg-sky-500 text-white p-3 rounded-lg ">View Recipes</Link>
+                            <Link to={`${id}`} className="text-sm bg-sky-800 btn text-white p-3 rounded-lg ">View Recipes</Link>
                         </div>
                     </div>
                 </div>
