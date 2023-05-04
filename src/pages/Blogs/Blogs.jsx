@@ -10,7 +10,7 @@ const Blogs = () => {
         <div>
           
             <div className='text-center'>
-            <Pdf targetRef={ref} filename="code-example.pdf">
+            <Pdf targetRef={ref} filename="blog.pdf">
                 {({ toPdf }) => <button className='btn bg-purple-600 my-3' onClick={toPdf}>Generate Pdf</button>}
             </Pdf>
             </div>

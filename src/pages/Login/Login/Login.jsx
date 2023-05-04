@@ -5,8 +5,7 @@ import { AuthContext } from '../../../provider/AuthProviders';
 
 const Login = () => {
     const {signIn, googleLogin, githubLogin} = useContext(AuthContext);
-    
-    
+
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -22,6 +21,9 @@ const Login = () => {
 
         console.log(email, password)
 
+
+    
+      
         signIn(email, password)
         .then(result => {
             const loggedUser = result.user;
