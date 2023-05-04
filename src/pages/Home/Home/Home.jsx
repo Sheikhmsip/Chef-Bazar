@@ -10,8 +10,10 @@ import { useLoaderData } from 'react-router-dom';
 const Home = () => {
     const chefs = useLoaderData();
     return (
-        <div className='container mx-auto'>
-            
+        <div className=''>
+             <div className='text-center'>
+                <h1 className='text-white font-extrabold text-3xl'>Chef Hunter </h1>
+            </div>
             <Marquee speed={200} className="carousel w-full rounded-lg">
                 <div id="item1" className="carousel-item w-full">
                     <img src={slider1} className="w-full h-[70vh]" />
@@ -26,7 +28,7 @@ const Home = () => {
                     <img src={slider4} className="w-full h-[70vh]" />
                 </div>
             </Marquee>
-            <div className='grid md:grid-cols-3 gap-4 grid-cols-1 justify-between mt-5'>
+            <div className='container mx-auto grid md:grid-cols-3 gap-4 grid-cols-1 justify-between mt-5'>
             {
                 chefs.map(chef => <Chef key={chef.id}
                 chef={chef}></Chef>)

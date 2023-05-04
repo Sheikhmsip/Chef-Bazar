@@ -12,10 +12,8 @@ const Header = () => {
             .catch(error => console.log(error));
     }
     return (
-        <div className='container mx-auto bg-purple-400 rounded-xl py-3 px-2'>
-            <div className='text-center'>
-                <h1>Chef Hunter </h1>
-            </div>
+        <div className=' bg-purple-400  py-3 px-2'>
+           
             <div className="navbar bg-purple-600 rounded-2xl ">
                 <div className="navbar-start">
                     <div className="dropdown">

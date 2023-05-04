@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login/Login';
@@ -19,6 +19,7 @@ const router = createBrowserRouter ([
             {
                 path: '/',
                 element: <Home></Home>,
+                
                 loader: ({params}) => fetch('https://chef-hunter-server-sheikhmsip.vercel.app/chefs')
             },
             {
@@ -44,7 +45,7 @@ const router = createBrowserRouter ([
             {
                 path: '/:id',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
+                loader: ({params}) => fetch(`https://chef-hunter-server-sheikhmsip.vercel.app/${params.id}`)
             }
         ]
     }
