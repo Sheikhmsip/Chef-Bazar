@@ -5,7 +5,7 @@ const Blogs = () => {
         <div>
             <div className='w-10/12 lg:w-8/12 mx-auto mb-12'>
                 <h2 className='text-4xl font-bold text-center text-sky-400 mb-12'>Questions</h2>
-                <div className='rounded-md drop-shadow-2xl bg-slate-50 border-2 p-6'>
+                <div className='rounded-md drop-shadow-2xl bg-purple-500 border-2 p-6 '>
                     <h2> <span className='font-bold text-sky-500'>Question-1: </span> Tell us the differences between uncontrolled and controlled components? </h2>
                     <hr />
                     <p className='mt-3 mb-10'>
@@ -20,7 +20,7 @@ const Blogs = () => {
 
 
 
-                <div className='rounded-md drop-shadow-2xl bg-slate-50 border-2 p-6'>
+                <div className='rounded-md drop-shadow-2xl bg-purple-500 border-2 p-6 my-3'>
                     <h2> <span className='font-bold text-sky-500'>Question-2: </span> How to validate React props using PropTypes?</h2>
                     <hr />
                     <p className='mt-3 mb-10'>
@@ -34,7 +34,7 @@ const Blogs = () => {
 
 
 
-                <div className='rounded-md drop-shadow-2xl bg-slate-50 border-2 p-6'>
+                <div className='rounded-md drop-shadow-2xl bg-purple-500 border-2 p-6 mb-3'>
                     <h2> <span className='font-bold text-sky-500'>Question-3: </span> Tell us the difference between nodejs and express js? </h2>
                     <hr />
                     <p className='mt-3 mb-10'>
@@ -43,7 +43,7 @@ const Blogs = () => {
                 </div>
 
 
-                <div className='rounded-md drop-shadow-2xl bg-slate-50 border-2 p-6'>
+                <div className='rounded-md drop-shadow-2xl bg-purple-500 border-2 p-6'>
                     <h2> <span className='font-bold text-sky-500'>Question-4: </span> What is a custom hook, and why will you create a custom hook? </h2>
                     <hr />
                     <p className='mt-3 mb-10'>

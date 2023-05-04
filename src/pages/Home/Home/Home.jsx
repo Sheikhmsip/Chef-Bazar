@@ -12,9 +12,9 @@ const Home = () => {
     const chefs = useLoaderData();
     return (
         <div className=''>
-            <div className='text-center'>
-                <h1 className='text-white font-extrabold text-3xl'>Chef Hunter </h1>
-            </div>
+            <Marquee speed={100} className='text-center '>
+                <h1 className='  text-3xl py-2 animate-text bg-gradient-to-r from-teal-400  via-amber-500  to-orange-400 bg-clip-text text-transparent font-extrabold'>Food is not only for eat It's a Fashion </h1>
+            </Marquee>
             <Marquee speed={200} className="carousel w-full rounded-lg">
                 <div id="item1" className="carousel-item w-full">
                     <img src={slider1} className="w-full h-[70vh]" />
