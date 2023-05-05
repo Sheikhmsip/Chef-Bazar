@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../../provider/AuthProviders';
 import { toast } from 'react-hot-toast';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
+    const [error, setError] = useState('');
 
     const handleRegister = event => {
         event.preventDefault();
@@ -24,13 +25,14 @@ const Register = () => {
         createUser( email, password, name, photo)
         .then(result => {
             const createdUser = result.user;
-            console.log(createdUser);
+            // console.log(createdUser);
            
             event.target.reset();
             return toast.success("Successfully Register")
         })
         .catch(error => {
-            console.log(error)
+            // console.log(error)
+           setError(toast.error('Already Register this email')) 
            
         })
     }
