@@ -64,6 +64,7 @@ const Login = () => {
                 <input type="password"  name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
 
                 <p className=' text-red-500'>{error}</p>
+                
                 <button className='btn btn-accent mt-2' type='submit'>Login</button>
 
                 <p>Don't have an account <span> <Link className='link link-primary' to="/register">Registration</Link></span></p>

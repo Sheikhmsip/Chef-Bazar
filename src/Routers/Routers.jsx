@@ -6,10 +6,11 @@ import Login from '../pages/Login/Login/Login';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Register from '../pages/Login/Register/Register';
 import Blogs from '../pages/Blogs/Blogs';
-import Details from '../pages/Details/Details';
+
 import DetailsLayout from '../Layout/DetailsLayout';
 import PrivateRoute from './PrivateRoute';
 import About from '../pages/About/About';
+import Details from '../pages/Details/Details';
 
 const router = createBrowserRouter ([
     {

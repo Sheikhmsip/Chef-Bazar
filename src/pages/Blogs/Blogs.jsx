@@ -1,5 +1,8 @@
 import React from 'react';
-import { ReactDOM } from 'react-dom';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
+
+
+// import { ReactDOM } from 'react-dom';
 import Pdf from "react-to-pdf"
 
 const ref = React.createRef();
@@ -8,11 +11,10 @@ const ref = React.createRef();
 const Blogs = () => {
     return (
         <div>
-          
             <div className='text-center'>
-            <Pdf targetRef={ref} filename="blog.pdf">
-                {({ toPdf }) => <button className='btn bg-purple-600 my-3' onClick={toPdf}>Generate Pdf</button>}
-            </Pdf>
+                <Pdf targetRef={ref} filename="blog.pdf">
+                    {({ toPdf }) => <button className='btn bg-purple-600 my-3' onClick={toPdf}><FaCloudDownloadAlt className='h-6 w-6 mx-1'></FaCloudDownloadAlt>Generate Pdf</button>}
+                </Pdf>
             </div>
             <div ref={ref} className='w-10/12 lg:w-8/12 mx-auto mb-12'>
                 <div className='w-[70%] mx-auto'>
