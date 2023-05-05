@@ -23,7 +23,7 @@ const Banner = () => {
                 <div className=' align-middle  w-full md:flex mt-3'>
 
                     <div className=' text-purple-900 bg-purple-300 bg-opacity-80 border rounded-md mx-auto align-middle mb-3 md:mb-0 '>
-                        <h4 className='font-bold text-center text-2xl text-black pt-2 mb-4'>Our Special Offer:</h4>
+                        <h4 className='font-bold text-center text-2xl text-black pt-2 mb-4'>Our Special Offer</h4>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-center '>
                             <div>
