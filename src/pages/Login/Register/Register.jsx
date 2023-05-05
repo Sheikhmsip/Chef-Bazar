@@ -16,10 +16,15 @@ const Register = () => {
 
         // console.log(name, password, email, photo)
 
-        createUser( email, password)
+        if(password.length < 6) {
+            toast.error("please set at least 6 characters ")
+            return
+          }
+
+        createUser( email, password, name, photo)
         .then(result => {
             const createdUser = result.user;
-            // console.log(createdUser);
+            console.log(createdUser);
            
             event.target.reset();
             return toast.success("Successfully Register")
@@ -59,7 +64,7 @@ const Register = () => {
                 
                 <button className='btn btn-accent mt-2' type='submit'>Register</button>
 
-                <p>Already have an account <span> <Link className='link link-primary' to="/login">Login</Link></span></p>
+                <p className='py-2'>Already have an account <span> <Link className='link link-primary' to="/login">Login</Link></span></p>
                 
             </form>
         </div>
