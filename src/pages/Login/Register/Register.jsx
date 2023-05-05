@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../../provider/AuthProviders';
+import { toast } from 'react-hot-toast';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
@@ -15,13 +16,17 @@ const Register = () => {
 
         // console.log(name, password, email, photo)
 
-        createUser(email, password)
+        createUser( email, password)
         .then(result => {
             const createdUser = result.user;
-            console.log(createdUser);
+            // console.log(createdUser);
+           
+            event.target.reset();
+            return toast.success("Successfully Register")
         })
         .catch(error => {
             console.log(error)
+           
         })
     }
     return (
@@ -49,10 +54,9 @@ const Register = () => {
 
                 <label className="label">
                     <span className="label-text font-bold">What is your Password?</span>
-                    
                 </label>
                 <input type="password" name='password' placeholder="Type here" required className="input input-bordered w-full max-w-xs" />
-
+                
                 <button className='btn btn-accent mt-2' type='submit'>Register</button>
 
                 <p>Already have an account <span> <Link className='link link-primary' to="/login">Login</Link></span></p>

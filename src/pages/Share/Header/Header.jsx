@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from '../../../provider/AuthProviders';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 import { FaUserCircle } from 'react-icons/fa';
+import { toast } from 'react-hot-toast';
 
 
 const Header = () => {
@@ -11,6 +12,8 @@ const Header = () => {
         logOut()
             .then()
             .catch(error => console.log(error));
+
+        toast.success('Successfully Logout')    
     }
     return (
         <div className=' bg-purple-400  py-3 px-2'>

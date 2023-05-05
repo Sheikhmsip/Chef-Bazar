@@ -7,13 +7,14 @@ const  Recipes = ({recipe}) => {
     const {photo_url, recipes_name, cooking, ingredients, rating} = recipe;
 
     const addFav = event => {
-        
+        // if(event.currentTarget.disabled == false){
             event.currentTarget.disabled = true;
-            toast('Added Favorite');
-       
-      
-        
-        
+            toast.success('Added Favorite');
+        // }
+        // else{
+        //     return toast.error('Already Added Favorite')
+        // }
+            
     }
     return (
        
@@ -48,7 +49,7 @@ const  Recipes = ({recipe}) => {
 
                     <div className="flex justify-between mt-3 ">                 
                     <div className="">
-                    <button className='text-sm  bg-slate-600 text-white flex items-center gap-2 p-3' onClick={addFav}><span> Add to Favorite</span></button>
+                    <button className='text-sm btn  bg-purple-600 text-white flex items-center gap-2 p-3' onClick={addFav}><span> Add to Favorite</span></button>
                     
                     </div>
                     </div>
